@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Foroldy" %></title>
+    <%= csrf_meta_tags %>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <%= stylesheet_link_tag "application", :media => "all" %>
+
+    <!-- For third-generation iPad with high-resolution Retina display: -->
+    <!-- Size should be 144 x 144 pixels -->
+    <%= favicon_link_tag 'images/apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+
+    <!-- For iPhone with high-resolution Retina display: -->
+    <!-- Size should be 114 x 114 pixels -->
+    <%= favicon_link_tag 'images/apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
+
+    <!-- For first- and second-generation iPad: -->
+    <!-- Size should be 72 x 72 pixels -->
+    <%= favicon_link_tag 'images/apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72' %>
+
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <!-- Size should be 57 x 57 pixels -->
+    <%= favicon_link_tag 'images/apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png' %>
+
+    <!-- For all other devices -->
+    <!-- Size should be 32 x 32 pixels -->
+    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Foroldy</a>
+          <div class="container nav-collapse">
+            <ul class="nav pull-right">
+              <li><%= link_to "Link1", "/path1"  %></li>
+              <li><%= link_to "Link2", "/path2"  %></li>
+              <li><%= link_to "Link3", "/path3"  %></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <div id="landing">
+      <div class="container">
+        <div class="row">
+          <div class="span5">
+            <div class="text-center"><%= image_tag "foroldy.png"  %></div>
+            <h1>Welcome to Foroldy</h1>
+            <p>Bounce is a modern and minimalistic template perfect for showing off your latest product or service and its features. Bounce comes with many pages and features that make it a wonderful starting point to create something even more unique.</p>
+            <div class="row">
+              <div class="span1 text-center">
+                <%= image_tag "glyphicons/glyphicons_040_stats.png" %>
+                <h3>Status</h3>
+              </div>
+              <div class="span2">
+                <div class="well">
+                  <div class="number">
+                    212
+                  </div>
+                  <div class="number-label">
+                    elders
+                  </div>
+                </div>
+              </div> <!--span2 -->
+              <div class="span2">
+                <div class="well">
+                  <div class="number">
+                    6444
+                  </div>
+                  <div class="number-label">
+                    equipments
+                  </div>
+                </div>
+
+              </div>
+            </div> <!--nested row -->
+          </div>
+          <div class="span7">
+            <div class="flexslider">
+              <ul class="slides">
+                <% %w(slide1.png slide2.png slide3.png slide4.png).each do |img| %>
+                  <li>
+                    <%= image_tag "#{img}" %>
+                  </li>
+                <%end%>
+              </ul>
+            </div>
+          </div>
+        </div> <!--row -->
+      </div> <!--container -->
+    </div> <!--landing -->
+
+    <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <div class="marketing">
+            <h2>Great features of your product or service</h2>
+            <p> Bunce is built on the awesome frontend framework Bootstrap </p>
+            <hr class="dashed">
+          </div>
+        </div>
+      </div> <!--row middle text -->
+      <div class="row">
+        <div class="span4 bouncy">
+          <div class="icon_wrapper">
+            <%= image_tag "support.png"  %>
+          </div>
+          <h2>Support Project</h2>
+          <p>Bounce is built on the awesome frontend framework Bootstrap, giving you easy access to all of its features.</p>
+        </div>
+        <div class="span4 bouncy">
+          <div class="icon_wrapper">
+            <%= image_tag "hope.png"  %>
+          </div>
+          <h2>Elder Care Services</h2>
+          <p>Bounce uses the beautiful Open Sans Google Web Font and Glyphicons Pro to deliver highly scalable icons.</p>
+        </div>
+        <div class="span4 bouncy">
+          <div class="icon_wrapper">
+            <%= image_tag "donate.png"  %>
+          </div>
+          <h2>Please Donate</h2>
+          <p>Bounce comes with several pages and colors, giving you a head start on creating a unique design.</p>
+        </div>
+      </div>
+    </div> <!--containner -->
+    </div> <!--content-->
+     <div class="container">
+       <h2> Product that we need for elder </h2>
+       <div class="row">
+         <div class="span12">
+           <div class="flexslider2">
+               <ul class="slides">
+                 <% %w(p1.png p2.png p3.png p4.png p5.png p6.png p8.png p9.png p10.png).each do |img| %>
+                   <li>
+                     <%= image_tag "#{img}" %>
+                   </li>
+                 <%end%>
+               </ul>
+            </div>
+         </div>
+       </div>
+     </div>
+
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="span3">
+            <h3>Quick Links</h3>
+            <ul class="animated">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="span3">
+            <h3>Company</h3>
+            <ul class="animated">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="span3">
+            <h3>We're Social</h3>
+            <ul class="animated">
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Google +</a></li>
+            </ul>
+          </div>
+          <div class="span3">
+            <h3>Subscribe</h3>
+            <p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
+            <form>
+              <input type="text" name="subscribe" placeholder="Your Email" class="span3">
+              <button class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> <!-- footer -->
+
+    <div id="copywrite">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <p>&copy; 2013 Bounce Template <span class="pull-right" id="totop">Back to Top <i class="icon-arrow-up icon-white"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </div> <!--copywrite -->
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "application" %>
+
+  </body>
+</html>
