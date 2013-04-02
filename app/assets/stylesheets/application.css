@@ -11,5 +11,6 @@
  *= require_self
  *= require site
  *= require flexslider.css
+ *= require thsarabun/thsarabunnew.css
  *= require_tree .
  */

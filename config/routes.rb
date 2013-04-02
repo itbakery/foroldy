@@ -1,4 +1,6 @@
 Foroldy::Application.routes.draw do
+  match "aboutus" => "aboutus#index"
+
   get "main/index"
 
   get "welcome/index"
