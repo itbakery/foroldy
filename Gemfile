@@ -38,6 +38,5 @@ gem 'bson_ext'
 # Deploy with Capistrano
 gem 'capistrano'
 gem 'rvm-capistrano'
-gem 'ckeditor'
 # To use debugger
 # gem 'debugger'
