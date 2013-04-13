@@ -47,13 +47,13 @@
           <a class="brand" style="margin-right: 20px;color: #E717CD;" href="/">Foroldy</a>
           <div class="container nav-collapse">
             <ul class="nav">
-                <h4 style="color: #FFFFFF; float: left; margin-right: 30px;">สถานะโครงการ</h4>
-                <div class="status" style="margin-right: 30px;">
+                <h4 style="color: #FFFFFF; float: left; margin-right: 10px;">สถานะ</h4>
+                <div class="status" style="margin-right: 20px;">
                   <div class="number-label" >
                     ผู้สูงอายุ:  212 คน
                   </div>
                 </div>
-                <div class="status" style="margin-right: 30px;">
+                <div class="status" style="margin-right: 20px;">
                   <div class="number-label">
                     อุปกรณ์:  100 ชิ้น
                   </div>
@@ -68,21 +68,24 @@
             <ul class="nav pull-right">
               <li><%= link_to "ประสงค์บริจาค", "/path1"  %></li>
               <li><%= link_to "แจ้งขอรับบริจาค", "/path2"  %></li>
-              <li><%= link_to "ติดต่อเรา", "/aboutus"  %></li>
-            </ul>
-            <ul class="nav">
-
-
               <% if user_signed_in? %>
+              <li>
                 Logged in as <strong><%= current_user.email %></strong>.
+              </li>
+              <li>
                 <%= link_to 'Edit profile', edit_user_registration_path %> |
-                <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+              </li>
+              <li>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete %> </li>
+              </li>
               <% else %>
+              <li>
                 <%= link_to "Sign up", new_user_registration_path %> |
+              </li>
+              <li>
                 <%= link_to "Login", new_user_session_path %>
+              </li>
               <% end %>
-
-
             </ul>
           </div><!--/.nav-collapse -->
         </div>
