@@ -38,5 +38,8 @@ gem 'bson_ext'
 # Deploy with Capistrano
 gem 'capistrano'
 gem 'rvm-capistrano'
+gem 'devise'
+gem 'cancan'
+gem 'rolify'
 # To use debugger
 # gem 'debugger'
