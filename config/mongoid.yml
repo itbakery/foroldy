@@ -82,7 +82,7 @@ test:
 production:
   sessions:
     default:
-      database: mrtablueline_production
+      database: foroldy_production
       hosts:
         - localhost:27017
       options:
