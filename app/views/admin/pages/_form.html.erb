@@ -1,0 +1,29 @@
+<%= form_for([:admin,@page]) do |f| %>
+  <% if @page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@page.errors.count, "error") %> prohibited this page from being saved:</h2>
+
+      <ul>
+      <% @page.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field large">
+    <%= f.label :name %>
+    <%= f.text_field :name , :class=>"span8  input-xlarge"%>
+  </div>
+  <div class="field large">
+    <%= f.label :permalink %>
+    <%= f.text_field :permalink, :class=>"span8  input-xlarge" %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content, :ckeditor => {:uiColor => "#AADC6E", :toolbar => "mini"} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

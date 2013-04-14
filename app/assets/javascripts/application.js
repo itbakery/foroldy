@@ -11,12 +11,21 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require ckeditor/init
 //= require jquery_ujs
+//= require dataTables/jquery.dataTables
 //= require twitter/bootstrap
 //= require flexslider
-//= require_tree
+//= require_tree .
+jQuery(function(){
 
-$(function(){
+   if ($('textarea').length > 0) {
+     var data = $('textarea');
+     $.each(data, function(i) {
+       CKEDITOR.replace(data[i].id);
+     });
+   }
+
     $('.flexslider').flexslider();
 
     $('.flexslider2').flexslider({
@@ -34,4 +43,6 @@ $(function(){
        }, 300);
        return false;
     });
+
 });
+

@@ -19,6 +19,7 @@ group :assets do
   gem 'less-rails'
   gem 'twitter-bootstrap-rails'
   gem 'uglifier', '>= 1.0.3'
+  gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
   gem 'flexslider', :git => 'https://github.com/constantm/Flexslider-2-Rails-Gem.git'
 end
 
@@ -41,5 +42,9 @@ gem 'rvm-capistrano'
 gem 'devise'
 gem 'cancan'
 gem 'rolify'
+gem 'ckeditor'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'carrierwave-mongoid', :require => "carrierwave/mongoid"
 # To use debugger
 # gem 'debugger'

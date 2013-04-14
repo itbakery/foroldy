@@ -1,9 +1,17 @@
 Foroldy::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
+  resources :pages, except: :show
+
+
   devise_for :users
 
   match "aboutus" => "aboutus#index"
 
-  get "main/index"
+  namespace :admin do
+    root to: "main#index"
+    resources :pages
+  end
 
   get "welcome/index"
 
@@ -12,6 +20,8 @@ Foroldy::Application.routes.draw do
   get "welcome/error"
 
   root to: "welcome#index"
+  #page_path(:id)
+  get 'p/:id', to:  'pages#show', as: :page
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
