@@ -13,13 +13,19 @@
 //= require jquery
 //= require ckeditor/init
 //= require jquery_ujs
+//= require jquery-ui
 //= require dataTables/jquery.dataTables
+//= require dataTables/jquery.dataTables.bootstrap
 //= require twitter/bootstrap
 //= require flexslider
 //= require_tree .
 jQuery(function(){
+    $('#pages').dataTable({
+     "sDom": '<"H"Cfr>t<"F"ip>',
+     "bJQueryUI": true
+    });
 
-   if ($('textarea').length > 0) {
+    if ($('textarea').length > 0) {
      var data = $('textarea');
      $.each(data, function(i) {
        CKEDITOR.replace(data[i].id);
